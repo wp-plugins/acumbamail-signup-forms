@@ -29,5 +29,8 @@ How to install?
 
 == Changelog ==
 
+= 1.0.1 =
+* Added fields by default in frontpage form.
+
 = 1.0 =
 * First Version / Primera versión
