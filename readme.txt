@@ -3,7 +3,7 @@ Contributors: jesusbotella
 Tags: acumbamail, mailing, email marketing
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 1.0.4
+Stable tag: 1.0.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,9 @@ How to install?
 3. Configure your Acumbamail account inside Wordpress Admin
 
 == Changelog ==
+
+= 1.0.4.1 =
+*Some Fixes
 
 = 1.0.4 =
 * Change style from frontend in the blog
