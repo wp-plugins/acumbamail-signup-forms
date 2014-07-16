@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
                 <div id="post-body" class="metabox-holder columns-2">
                     <!-- main content -->
                     <?php if(gettype($response_lists) == "string") {
-                            echo '<div class="updated">'.$response_lists.'</div>';
+                            echo '<div class="error">'.$response_lists.'</div>';
                           }
                     ?>
 

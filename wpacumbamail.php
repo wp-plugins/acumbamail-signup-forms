@@ -3,7 +3,7 @@
  *  Plugin Name: Acumbamail
  *  Plugin URI:
  *  Description: Plugin para Wordpress destinado a la creación de Widgets para la suscripción de usuarios a listas
- *  Version: 1.0.4.2
+ *  Version: 1.0.4.3
  *  Author: Acumbamail
  *  Author URI: http://acumbamail.com
  *  License: GPLv2
@@ -125,9 +125,6 @@ function wpacumbamail_options_page(){
         $api = new AcumbamailAPI($acumba_customer_id,$acumba_auth_token);
 
         $response_lists = $api->getLists();
-        if(gettype($response_lists) == "string"){
-            echo '<div class="updated">ERROR: '.$response_lists.'</div>';
-        }
 
         if($response_lists!='' && $chosen_list!=''){
             $mergetags = $api->getFields($chosen_list);
