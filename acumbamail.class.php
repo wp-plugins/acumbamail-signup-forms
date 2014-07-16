@@ -1,13 +1,16 @@
 <?php
 /* PHP Class for Acumbamail API */
+/* ONLY FOR WORDPRESS*/
 
 class AcumbamailAPI{
     private $auth_token;
     private $customer_id;
+    private $http_method;
 
     function __construct($customer_id, $auth_token){
         $this->auth_token = $auth_token;
         $this->customer_id = $customer_id;
+        $this->http_method = get_option('acumba_http',"https");
     }
 
     // createList($sender_email,$name,$company,$country,$city,$address,$phone)
@@ -151,16 +154,30 @@ class AcumbamailAPI{
             $postvars .= $key.'='.$value.'&';
         }
 
-        $ch = curl_init();
+        if(function_exists("curl_init")){
+            $ch = curl_init();
 
-        curl_setopt($ch,CURLOPT_URL, $url);
-        curl_setopt($ch,CURLOPT_POST, true);
-        curl_setopt($ch,CURLOPT_POSTFIELDS, $postvars);
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch,CURLOPT_URL, $url);
+            curl_setopt($ch,CURLOPT_POST, true);
+            curl_setopt($ch,CURLOPT_POSTFIELDS, $postvars);
+            curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
+            if (strpos($url, 'https') == false){
+                //curl_setopt ($ch, CURLOPT_CAINFO, "PATH_TO/cacert.pem");
+                curl_setopt($ch,CURLOPT_FOLLOWLOCATION, true);
+                curl_setopt($ch,CURLOPT_POSTREDIR, 3);
+            }
 
-        $response=json_decode(curl_exec($ch),true);
-        curl_close($ch);
+            $response = curl_exec($ch);
 
+            if(curl_errno($ch)){
+                $response = "CURL ERROR: ".curl_error($ch);
+            }else{
+                $response=json_decode($response,true);
+            }
+            curl_close($ch);
+        }else{
+            $response = "Para utilizar el plugin necesitas cURL instalado en tu servidor";
+        }
         return $response;
     }
 }

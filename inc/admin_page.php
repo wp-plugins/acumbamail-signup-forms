@@ -17,6 +17,11 @@ jQuery(document).ready(function() {
         <div id="poststuff">
                 <div id="post-body" class="metabox-holder columns-2">
                     <!-- main content -->
+                    <?php if(gettype($response_lists) == "string") {
+                            echo '<div class="updated">'.$response_lists.'</div>';
+                          }
+                    ?>
+
                     <div id="post-body-content">
                         <div class="meta-box-sortables ui-sortable">
                             <div class="postbox">
@@ -36,7 +41,7 @@ jQuery(document).ready(function() {
                             <p><input class="button-primary" type="submit" value="<?php _e( 'Guardar Ajustes' ); ?>" /></p>
                             </form>
 
-                            <?php if($response_lists){ ?>
+                            <?php if((count($response_lists) > 0) && (gettype($response_lists) != "string")){ ?>
                             <div class="postbox">
                                 <h3><span>Tus Listas</span>
 
