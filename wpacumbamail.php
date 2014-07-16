@@ -3,7 +3,7 @@
  *  Plugin Name: Acumbamail
  *  Plugin URI:
  *  Description: Plugin para Wordpress destinado a la creación de Widgets para la suscripción de usuarios a listas
- *  Version: 1.0.4.4
+ *  Version: 1.0.4.5
  *  Author: Acumbamail
  *  Author URI: http://acumbamail.com
  *  License: GPLv2
@@ -85,21 +85,23 @@ function wpacumbamail_options_page(){
     //TODO
     if(isset($_POST['changed_order'])){
         $ordered=array();
-        $hidden_field = $_POST['changed_order'];
-
-        unset($_POST['changed_order']);
-        if($hidden_field == 'Y'){
-            foreach ($_POST as $key=>$value) {
-                if(strpos($key,'_given') !== false){
-                    $index=strtok($key, '_');
-                    $widget_fields[$index]['name_given']=$value;
-                }else{
-                    $ordered[$value]=$key;
-                }
-            }
-            update_option('acumba_widget_fields', $widget_fields);
-            update_option('acumba_ordered_fields', $ordered);
+        if(isset($_POST['theme_style'])){
+            update_option('theme_style', "y");
+        }else{
+            update_option('theme_style', "n");
         }
+        unset($_POST['changed_order']);
+        unset($_POST['theme_style']);
+        foreach ($_POST as $key=>$value) {
+            if(strpos($key,'_given') !== false){
+                $index=strtok($key, '_');
+                $widget_fields[$index]['name_given']=$value;
+            }else{
+                $ordered[$value]=$key;
+            }
+        }
+        update_option('acumba_widget_fields', $widget_fields);
+        update_option('acumba_ordered_fields', $ordered);
     }
 
     $options = get_option('acumba_plugin_data');

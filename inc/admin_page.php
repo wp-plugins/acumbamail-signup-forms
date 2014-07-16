@@ -85,6 +85,9 @@ jQuery(document).ready(function() {
                                         ?>
                                         </tbody>
                                     </table>
+                                    <div style="margin-top: 10px;">
+                                        <input type="checkbox" name="theme_style" <?php if(get_option('theme_style')=='y'){ echo "checked"; } ?>/> Utilizar estilo integrado con el template de Wordpress
+                                    </div>
                                 </div><!-- .inside -->
                             </div> <!-- .postbox -->
                             <p><input class="button-primary" type="submit" value="<?php _e( 'Guardar Cambios' ); ?>" /></p>

@@ -10,6 +10,10 @@ class WPAcumbamail_Widget extends WP_WIDGET{
         extract($args);
 
         wp_enqueue_script('jquery');
+        wp_enqueue_script('alt-checkbox-script', plugins_url( 'assets/alt-checkbox/jquery.alt-checkbox.js' , __FILE__ ));
+        wp_enqueue_style( 'frontend', plugins_url( 'assets/frontend/style.css' , __FILE__ ));
+        wp_enqueue_style( 'alt-checkbox.icon-font',  plugins_url( 'assets/alt-checkbox/jquery.alt-checkbox.icon-font.css' , __FILE__ ));
+        wp_enqueue_style( 'alt-checkbox', plugins_url( 'assets/alt-checkbox/jquery.alt-checkbox.css' , __FILE__ ));
 
         $title = apply_filters('widget_title', $instance['title'] );
         $subtitle = $instance[ 'subtitle' ];
