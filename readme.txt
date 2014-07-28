@@ -3,7 +3,7 @@ Contributors: jesusbotella
 Tags: acumbamail, mailing, email marketing
 Requires at least: 3.0.1
 Tested up to: 3.9.1
-Stable tag: 1.0.4.5
+Stable tag: 1.0.4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,9 +29,11 @@ How to install?
 
 == Changelog ==
 
-= 1.0.4.1 =
-*Better Error Handling
+= 1.0.4.6 =
+*BugFixes
 
+= 1.0.4.2 =
+*Better Error Handling
 
 = 1.0.4.1 =
 *Some Fixes

@@ -161,7 +161,7 @@ class AcumbamailAPI{
             curl_setopt($ch,CURLOPT_POST, true);
             curl_setopt($ch,CURLOPT_POSTFIELDS, $postvars);
             curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
-            if (strpos($url, 'https') == false){
+            if (strpos($url, 'https') !== false){
                 curl_setopt ($ch, CURLOPT_CAINFO, dirname(__FILE__) . "/assets/cacert.pem");
                 curl_setopt($ch,CURLOPT_FOLLOWLOCATION, true);
                 curl_setopt($ch,CURLOPT_POSTREDIR, 3);
