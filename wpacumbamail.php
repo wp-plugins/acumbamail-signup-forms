@@ -3,7 +3,7 @@
  *  Plugin Name: Acumbamail
  *  Plugin URI:
  *  Description: Plugin para Wordpress destinado a la creación de Widgets para la suscripción de usuarios a listas
- *  Version: 1.0.4.7
+ *  Version: 1.0.4.8
  *  Author: Acumbamail
  *  Author URI: http://acumbamail.com
  *  License: GPLv2
@@ -93,8 +93,8 @@ function wpacumbamail_options_page(){
         unset($_POST['changed_order']);
         unset($_POST['theme_style']);
         foreach ($_POST as $key=>$value) {
-            if(strpos($key,'_given') !== false){
-                $index=strtok($key, '_');
+            if(strpos($key,'-given') !== false){
+                $index=strtok($key, '-');
                 $widget_fields[$index]['name_given']=$value;
             }else{
                 $ordered[$value]=$key;
@@ -137,13 +137,14 @@ function wpacumbamail_options_page(){
                 $ordered = array();
                 $i = 0;
                 foreach (array_keys($mergetags) as $mergetag) {
-                    $widget_fields[$mergetag] = array(
+                    $index = str_replace(" ", "_", $mergetag);
+                    $widget_fields[$index] = array(
                         "name" => $mergetag,
                         "type" => $mergetags[$mergetag],
                         "name_given" => $mergetag,
                     );
 
-                    $ordered[$i++] = $mergetag;
+                    $ordered[$i++] = $index;
                 }
 
                 update_option('acumba_widget_fields', $widget_fields);
