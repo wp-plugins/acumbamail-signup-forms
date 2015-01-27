@@ -19,22 +19,27 @@ This plugin make a widget to show your Acumbamail signup form easily in your blo
 == Installation ==
 
 ¿Cómo se instala?
+
 1. Sube la carpeta del plugin al directorio `/wp-content/plugins/`
+
 2. Activa el plugin mediante el menú de plugins incluido en wordpress
+
 3. Configura tu cuenta y tu lista de acumbamail desde el panel de administración de Wordpress
 
 How to install?
+
 1. Upload the plugin folder to the `/wp-content/plugins/` directory
+
 2. Activate the plugin through the 'Plugins' menu in WordPress
+
 3. Configure your Acumbamail account inside Wordpress Admin
 
-Mas info:
+Mas info/More info:
 https://acumbamail.com/kb/article/integracion-de-formulario-en-wordpress/59/
 
 
 == Changelog ==
 
-<<<<<<< 
 = 1.0.5 =
 *New Frontend
 
@@ -44,11 +49,6 @@ https://acumbamail.com/kb/article/integracion-de-formulario-en-wordpress/59/
 = 1.0.4.7 =
 *BugFixes
 
-=======
-= 1.0.4.7 =
-*BugFixes
-
->>>>>>> .r1045717
 = 1.0.4.6 =
 *BugFixes
 
