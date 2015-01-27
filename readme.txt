@@ -25,7 +25,7 @@ How to install?
 ¿Cómo se instala?
 1. Sube la carpeta del plugin al directorio `/wp-content/plugins/`
 2. Activa el plugin mediante el menú de plugins incluido en wordpress
-3. Configure your Acumbamail account inside Wordpress Admin2
+3. Configure your Acumbamail account inside Wordpress Admin
 
 == Changelog ==
 
