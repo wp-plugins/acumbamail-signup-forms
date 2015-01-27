@@ -35,6 +35,9 @@ https://acumbamail.com/kb/article/integracion-de-formulario-en-wordpress/59/
 == Changelog ==
 
 <<<<<<< 
+= 1.0.5 =
+*New Frontend
+
 = 1.0.4.8 =
 *BugFixes
 
