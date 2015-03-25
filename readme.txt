@@ -3,7 +3,7 @@ Contributors: jesusbotella
 Tags: acumbamail, mailing, email marketing
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: 1.0.5
+Stable tag: 1.0.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ https://acumbamail.com/kb/article/integracion-de-formulario-en-wordpress/59/
 
 
 == Changelog ==
+
+= 1.0.5.1 =
+*New css design
 
 = 1.0.5 =
 *New Frontend
