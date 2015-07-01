@@ -3,7 +3,7 @@ Contributors: jesusbotella
 Tags: acumbamail, mailing, email marketing
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: 1.0.5.2
+Stable tag: 1.0.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,8 @@ This plugin make a widget to show your Acumbamail signup form easily in your blo
 
 3. Configura tu cuenta y tu lista de acumbamail desde el panel de administración de Wordpress
 
+(Recuerda que debes tener instalado cURL en tu servidor)
+
 How to install?
 
 1. Upload the plugin folder to the `/wp-content/plugins/` directory
@@ -34,11 +36,16 @@ How to install?
 
 3. Configure your Acumbamail account inside Wordpress Admin
 
+(Remember to install cURL on your server)
+
 Mas info/More info:
 https://acumbamail.com/kb/article/integracion-de-formulario-en-wordpress/59/
 
 
 == Changelog ==
+
+= 1.0.5.3 =
+*Install requirements
 
 = 1.0.5.2 =
 *Updating css design
