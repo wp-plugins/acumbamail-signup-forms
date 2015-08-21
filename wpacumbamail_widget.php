@@ -3,7 +3,7 @@ class WPAcumbamail_Widget extends WP_WIDGET{
     function wpacumbamail_widget(){
         parent::__construct('false', $name = __( 'Acumbamail Widget'), //tranlation enabled // accessing the perant constructer
             array( 'description' => __('Widget para la inclusión de un formulario en el blog'))
-            ); // end of the construct
+            ); // end of the constructor
     }
 
     function widget($args, $instance){

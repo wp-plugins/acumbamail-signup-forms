@@ -3,7 +3,7 @@
  *  Plugin Name: Acumbamail
  *  Plugin URI:
  *  Description: Plugin para Wordpress destinado a la creación de Widgets para la suscripción de usuarios a listas
- *  Version: 1.0.5
+ *  Version: 1.0.6
  *  Author: Acumbamail
  *  Author URI: http://acumbamail.com
  *  License: GPLv2
@@ -19,7 +19,7 @@ require('wpacumbamail_widget.php');
 
 function wpacumbamail(){
     /*
-     * Usa la función add_menu_page para añadir el enlace en el menú de administración
+     * Usa la función add_menu_page para añadir el enlace en el menu de administración
      * add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
      */
 
