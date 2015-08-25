@@ -1,7 +1,11 @@
 <script type="text/javascript">
+
 jQuery(document).ready(function(){
+    jQuery('input').keypress(function(){
+        jQuery('#submit_acumba').removeProp('disabled');
+    });
     jQuery('#submit_acumba').click(function(){
-        var initialText=jQuery('#submit_acumba').prop('value');
+        var initialText=jQuery('#submit_acumba').text();
         var datatosend={};
         jQuery("input[id*='acumba_']").each(function(index){
             if(jQuery(this).prop('type')=='checkbox'){
@@ -15,7 +19,7 @@ jQuery(document).ready(function(){
             }
         });
 
-        jQuery('#submit_acumba').prop('value',"Cargando...");
+        jQuery('#submit_acumba').text("Enviando...");
 
         datatosend['action']="send_acumbaform";
         console.log(JSON.stringify(datatosend));
@@ -23,11 +27,14 @@ jQuery(document).ready(function(){
             console.log(data);
             if(data=="Te has suscrito correctamente."){
                 jQuery('#acumba_info').css('color','green');
+                jQuery('#submit_acumba').text('Completado');
+	        jQuery('#submit_acumba').prop('disabled','true');
             } else {
                 jQuery('#acumba_info').css('color','red');
+                jQuery('#submit_acumba').text(initialText);
             }
             jQuery('#acumba_info').html(data);
-            jQuery('#submit_acumba').prop('value',initialText);
+            
         });
 
     });
