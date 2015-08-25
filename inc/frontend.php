@@ -1,11 +1,12 @@
 <script type="text/javascript">
 
 jQuery(document).ready(function(){
+    var initialText=jQuery('#submit_acumba').text();
     jQuery('input').keypress(function(){
         jQuery('#submit_acumba').removeProp('disabled');
+        jQuery('#submit_acumba').text(initialText);
     });
-    jQuery('#submit_acumba').click(function(){
-        var initialText=jQuery('#submit_acumba').text();
+    jQuery('#submit_acumba').click(function(){        
         var datatosend={};
         jQuery("input[id*='acumba_']").each(function(index){
             if(jQuery(this).prop('type')=='checkbox'){
